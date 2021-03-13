@@ -68,6 +68,7 @@ fun HomeScreen(
         },
         floatingActionButton = {
             FloatingActionButton(
+                backgroundColor = MaterialTheme.colors.primary,
                 onClick = {},
                 elevation = FloatingActionButtonDefaults.elevation(
                     defaultElevation = 0.dp,
