@@ -17,7 +17,9 @@ easier to get working on quickly.
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
+Light theme:
 <img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">&emsp;<img src="/results/screenshot_3.png" width="260">
+Dark theme:
 <img src="/results/screenshot_4.png" width="260">&emsp;<img src="/results/screenshot_5.png" width="260">&emsp;<img src="/results/screenshot_6.png" width="260">
 
 Link to the [video](/results/video.mp4)
