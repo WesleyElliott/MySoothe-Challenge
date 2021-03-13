@@ -17,7 +17,7 @@ package com.wesleyelliott.mysoothe.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val gray800 = Color(0xFF333333)
+val gray800 = Color(0xCC333333)
 val gray900 = Color(0xFF333333)
 
 val rust300 = Color(0xFFE1AFAF)
