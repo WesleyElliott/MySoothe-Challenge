@@ -18,29 +18,20 @@ package com.wesleyelliott.mysoothe
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.view.WindowCompat
 import com.wesleyelliott.mysoothe.ui.theme.MySootheTheme
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             MySootheTheme {
-                MyApp()
+                MySootheApp()
             }
         }
-    }
-}
-
-// Start building your app here!
-@Composable
-fun MyApp() {
-    Surface(color = MaterialTheme.colors.background) {
-        Text(text = "Ready... Set... GO!")
     }
 }
 
@@ -48,7 +39,7 @@ fun MyApp() {
 @Composable
 fun LightPreview() {
     MySootheTheme {
-        MyApp()
+        MySootheApp()
     }
 }
 
@@ -56,6 +47,6 @@ fun LightPreview() {
 @Composable
 fun DarkPreview() {
     MySootheTheme(darkTheme = true) {
-        MyApp()
+        MySootheApp()
     }
 }
