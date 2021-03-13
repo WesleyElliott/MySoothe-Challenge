@@ -56,7 +56,7 @@ fun MySootheTheme(
 
     MaterialTheme(
         colors = colors,
-        typography = typography,
+        typography = mySootheTypography,
         shapes = shapes,
         content = content
     )

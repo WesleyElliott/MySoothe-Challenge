@@ -17,27 +17,57 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.R
 
-// Set of Material typography styles to start with
-val typography = Typography(
-    body1 = TextStyle(
-        fontFamily = FontFamily.Default,
+private val KulimPark = FontFamily(
+    Font(R.font.kulimpark_light),
+    Font(R.font.kulimpark_regular),
+)
+
+private val Lato = FontFamily(
+    Font(R.font.lato_regular),
+    Font(R.font.lato_bold),
+)
+
+val mySootheTypography = Typography(
+    h1 = TextStyle(
+        fontSize = 28.sp,
+        letterSpacing = 1.15.sp,
+        fontFamily = KulimPark,
+        fontWeight = FontWeight.Light
+    ),
+    h2 = TextStyle(
+        fontSize = 15.sp,
+        letterSpacing = 1.15.sp,
+        fontFamily = KulimPark,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    )
-        /* Other default text styles to override
+    ),
+    h3 = TextStyle(
+        fontSize = 14.sp,
+        letterSpacing = 0.sp,
+        fontFamily = Lato,
+        fontWeight = FontWeight.Bold,
+    ),
+    body1 = TextStyle(
+        fontSize = 14.sp,
+        letterSpacing = 0.sp,
+        fontFamily = Lato,
+        fontWeight = FontWeight.Normal,
+    ),
     button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
-        fontSize = 14.sp
+        fontSize = 14.sp,
+        letterSpacing = 1.15.sp,
+        fontFamily = Lato,
+        fontWeight = FontWeight.Bold,
     ),
     caption = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
-    )
-    */
+        fontSize = 12.sp,
+        letterSpacing = 1.15.sp,
+        fontFamily = KulimPark,
+        fontWeight = FontWeight.Normal
+    ),
 )
