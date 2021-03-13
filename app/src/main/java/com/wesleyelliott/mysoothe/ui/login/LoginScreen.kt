@@ -34,6 +34,14 @@ fun LoginScreen(
         R.drawable.bg_login_light
     }
 
+    val emailText = remember {
+        mutableStateOf("")
+    }
+
+    val passwordText = remember {
+        mutableStateOf("")
+    }
+
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -59,25 +67,22 @@ fun LoginScreen(
                 color = MaterialTheme.colors.onBackground
             )
 
-            val state = remember {
-                mutableStateOf("")
-            }
             MySootheTextField(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 32.dp),
-                value = state.value,
+                value = emailText.value,
                 placeholder = "Email address",
-                onValueChange = { state.value = it },
+                onValueChange = { emailText.value = it },
             )
 
             MySootheTextField(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 8.dp),
-                value = "",
+                value = passwordText.value,
                 placeholder = "Password",
-                onValueChange = { /*TODO*/ },
+                onValueChange = { passwordText.value = it },
             )
 
             MySootheButton(
