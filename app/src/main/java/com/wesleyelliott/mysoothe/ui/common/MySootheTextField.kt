@@ -34,7 +34,11 @@ fun MySootheTextField(
         onValueChange = onValueChange,
         placeholder = placeholder?.let {
             {
-                Text(text = it, style = MaterialTheme.typography.body1)
+                Text(
+                    text = it,
+                    style = MaterialTheme.typography.body1,
+                    color = MaterialTheme.colors.onSurface
+                )
             }
         },
         textStyle = MaterialTheme.typography.body1,
@@ -45,7 +49,8 @@ fun MySootheTextField(
             bottomEnd = 0.dp
         ),
         colors = TextFieldDefaults.textFieldColors(
-            backgroundColor = backgroundColor
+            backgroundColor = backgroundColor,
+            textColor = MaterialTheme.colors.onSurface
         )
     )
 }

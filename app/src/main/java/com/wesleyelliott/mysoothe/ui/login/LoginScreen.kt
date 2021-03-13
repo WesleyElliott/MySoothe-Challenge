@@ -11,6 +11,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -50,9 +53,10 @@ fun LoginScreen(
         ) {
 
             Text(
-                modifier = Modifier.padding(top = 200.dp),
+                modifier = Modifier.paddingFromBaseline(top = 200.dp),
                 text = "LOGIN",
-                style = MaterialTheme.typography.h1
+                style = MaterialTheme.typography.h1,
+                color = MaterialTheme.colors.onBackground
             )
 
             val state = remember {
@@ -80,6 +84,18 @@ fun LoginScreen(
                 modifier = Modifier.padding(top = 8.dp),
                 text = "Login",
                 onClick = onLoginClick
+            )
+
+            val text = with(AnnotatedString.Builder("Don't have an account? ")) {
+                pushStyle(SpanStyle(textDecoration = TextDecoration.Underline))
+                append("Sign up")
+                pop()
+                toAnnotatedString()
+            }
+            Text(
+                modifier = Modifier.paddingFromBaseline(top = 32.dp),
+                text = text,
+                color = MaterialTheme.colors.onBackground
             )
         }
     }
