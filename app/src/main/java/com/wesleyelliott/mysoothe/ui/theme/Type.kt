@@ -24,13 +24,13 @@ import androidx.compose.ui.unit.sp
 import com.wesleyelliott.mysoothe.R
 
 private val KulimPark = FontFamily(
-    Font(R.font.kulimpark_light),
-    Font(R.font.kulimpark_regular),
+    Font(R.font.kulimpark_light, FontWeight.Light),
+    Font(R.font.kulimpark_regular, FontWeight.Normal),
 )
 
 private val Lato = FontFamily(
-    Font(R.font.lato_regular),
-    Font(R.font.lato_bold),
+    Font(R.font.lato_regular, FontWeight.Normal),
+    Font(R.font.lato_bold, FontWeight.Bold),
 )
 
 val mySootheTypography = Typography(

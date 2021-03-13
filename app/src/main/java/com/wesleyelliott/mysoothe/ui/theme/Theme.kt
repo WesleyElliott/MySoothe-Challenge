@@ -15,7 +15,6 @@
  */
 package com.wesleyelliott.mysoothe.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
@@ -44,8 +43,13 @@ private val mySootheDarkColors = darkColors(
 )
 
 @Composable
+fun isDarkTheme(): Boolean {
+    return false //isSystemInDarkTheme()
+}
+
+@Composable
 fun MySootheTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = isDarkTheme(),
     content: @Composable() () -> Unit
 ) {
     val colors = if (darkTheme) {

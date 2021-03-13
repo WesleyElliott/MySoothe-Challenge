@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
-            MySootheTheme {
+            MySootheTheme(darkTheme = false) {
                 MySootheApp()
             }
         }
