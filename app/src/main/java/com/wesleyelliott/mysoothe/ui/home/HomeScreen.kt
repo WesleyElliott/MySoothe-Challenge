@@ -85,12 +85,12 @@ fun HomeScreen(
         isFloatingActionButtonDocked = true,
     ) {
         Column(
-            modifier = Modifier.padding(start = 16.dp),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             MySootheTextField(
                 modifier = Modifier
+                    .padding(horizontal = 16.dp)
                     .fillMaxWidth()
                     .padding(top = 56.dp),
                 value = searchText.value,
@@ -124,6 +124,7 @@ fun FavouritesCollection(
             .paddingFromBaseline(top = 40.dp),
     ) {
         Text(
+            modifier = Modifier.padding(horizontal = 16.dp),
             text = "Favourites".toUpperCase(),
             style = MaterialTheme.typography.h2,
             color = MaterialTheme.colors.onBackground
@@ -131,7 +132,8 @@ fun FavouritesCollection(
 
         LazyRow(
             modifier = Modifier.padding(top = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            contentPadding = PaddingValues(horizontal = 16.dp, 0.dp)
         ) {
 
             for (i in favouriteCollections.indices step 2) {
@@ -197,6 +199,7 @@ fun AlignYourBody(
             .paddingFromBaseline(top = 40.dp),
     ) {
         Text(
+            modifier = Modifier.padding(horizontal = 16.dp),
             text = "Align Your Body".toUpperCase(),
             style = MaterialTheme.typography.h2,
             color = MaterialTheme.colors.onBackground
@@ -204,7 +207,8 @@ fun AlignYourBody(
 
         LazyRow(
             modifier = Modifier.padding(top = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 0.dp)
         ) {
             items(alignYourBodyData) { data ->
                 RoundedImageWithCaption(
@@ -226,6 +230,7 @@ fun AlignYourMind(
             .paddingFromBaseline(top = 40.dp),
     ) {
         Text(
+            modifier = Modifier.padding(horizontal = 16.dp),
             text = "Align Your Mind".toUpperCase(),
             style = MaterialTheme.typography.h2,
             color = MaterialTheme.colors.onBackground
@@ -233,7 +238,8 @@ fun AlignYourMind(
 
         LazyRow(
             modifier = Modifier.padding(top = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 0.dp)
         ) {
             items(alignYourMindData) { data ->
                 RoundedImageWithCaption(imageUrl = data.imageUrl, caption = data.title)
