@@ -14,7 +14,7 @@ import com.wesleyelliott.mysoothe.ui.welcome.WelcomeScreen
 object Destinations {
     const val WELCOME ="welcome"
     const val LOGIN = "login"
-    const val HOME = "HOME"
+    const val HOME = "home"
 }
 
 class NavActions(navController: NavController) {
