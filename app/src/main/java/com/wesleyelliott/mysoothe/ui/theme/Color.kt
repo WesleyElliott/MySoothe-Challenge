@@ -13,13 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge
+package com.wesleyelliott.mysoothe.ui.theme
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
-    // Add unit tests here
-}
+import androidx.compose.ui.graphics.Color
+
+val gray800 = Color(0xFF333333)
+val gray900 = Color(0xFF333333)
+
+val rust300 = Color(0xFFE1AFAF)
+val rust600 = Color(0xFF886363)
+
+val taupe100 = Color(0xFFF0EAE2)
+val taupe800 = Color(0x655454)
+
+val white = Color(0xFFFFFFFF)
+val white150 = Color(0x26FFFFFF) // White, 15%
+val white800 = Color(0xCCFFFFFF) // White, 80%
+val white850 = Color(0xD9FFFFFF) // White, 85%

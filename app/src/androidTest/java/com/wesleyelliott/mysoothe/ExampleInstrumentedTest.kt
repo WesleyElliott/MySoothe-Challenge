@@ -13,20 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.wesleyelliott.mysoothe
 
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
 
-val gray800 = Color(0xFF333333)
-val gray900 = Color(0xFF333333)
+/**
+ * Instrumented test, which will execute on an Android device.
+ *
+ * See [testing documentation](http://d.android.com/tools/testing).
+ */
+@RunWith(AndroidJUnit4::class)
+class ExampleInstrumentedTest {
+    @get:Rule
+    val composeTestRule = createAndroidComposeRule<MainActivity>()
 
-val rust300 = Color(0xFFE1AFAF)
-val rust600 = Color(0xFF886363)
-
-val taupe100 = Color(0xFFF0EAE2)
-val taupe800 = Color(0x655454)
-
-val white = Color(0xFFFFFFFF)
-val white150 = Color(0x26FFFFFF) // White, 15%
-val white800 = Color(0xCCFFFFFF) // White, 80%
-val white850 = Color(0xD9FFFFFF) // White, 85%
+    @Test
+    fun sampleTest() {
+        // Add instrumented tests here
+    }
+}
