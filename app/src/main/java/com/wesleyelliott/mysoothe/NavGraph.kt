@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
+import com.wesleyelliott.mysoothe.ui.home.HomeScreen
 import com.wesleyelliott.mysoothe.ui.login.LoginScreen
 import com.wesleyelliott.mysoothe.ui.welcome.WelcomeScreen
 
@@ -45,7 +46,7 @@ fun NavGraph(
             LoginScreen(onLoginClick = actions.loginToHome)
         }
         composable(Destinations.HOME) {
-
+            HomeScreen()
         }
     }
 }

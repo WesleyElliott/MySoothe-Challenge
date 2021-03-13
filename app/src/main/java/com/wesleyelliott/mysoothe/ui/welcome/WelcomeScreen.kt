@@ -14,6 +14,7 @@ import com.wesleyelliott.mysoothe.R
 import com.wesleyelliott.mysoothe.ui.common.MySootheButton
 import com.wesleyelliott.mysoothe.ui.common.MySootheSecondaryButton
 import com.wesleyelliott.mysoothe.ui.theme.isDarkTheme
+import dev.chrisbanes.accompanist.insets.statusBarsPadding
 
 @Composable
 fun WelcomeScreen(
@@ -44,6 +45,7 @@ fun WelcomeScreen(
 
         Column(
             modifier = Modifier
+                .statusBarsPadding()
                 .fillMaxSize()
                 .padding(horizontal = 16.dp),
             verticalArrangement = Arrangement.Center,

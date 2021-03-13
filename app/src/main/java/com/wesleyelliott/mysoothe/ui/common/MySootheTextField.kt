@@ -18,6 +18,7 @@ fun MySootheTextField(
     modifier: Modifier = Modifier,
     value: String,
     placeholder: String? = null,
+    leadingIcon: @Composable (() -> Unit)? = null,
     onValueChange: (String) -> Unit
 ) {
 
@@ -41,6 +42,7 @@ fun MySootheTextField(
                 )
             }
         },
+        leadingIcon = leadingIcon,
         textStyle = MaterialTheme.typography.body1,
         shape = RoundedCornerShape(
             topStart = 4.dp,

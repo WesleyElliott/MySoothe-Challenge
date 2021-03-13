@@ -21,6 +21,7 @@ import com.wesleyelliott.mysoothe.R
 import com.wesleyelliott.mysoothe.ui.common.MySootheButton
 import com.wesleyelliott.mysoothe.ui.common.MySootheTextField
 import com.wesleyelliott.mysoothe.ui.theme.isDarkTheme
+import dev.chrisbanes.accompanist.insets.statusBarsPadding
 
 @Composable
 fun LoginScreen(
@@ -54,6 +55,7 @@ fun LoginScreen(
 
         Column(
             modifier = Modifier
+                .statusBarsPadding()
                 .fillMaxSize()
                 .padding(horizontal = 16.dp),
             verticalArrangement = Arrangement.Top,
