@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.wesleyelliott.mysoothe.data.alignYourBodyData
 import com.wesleyelliott.mysoothe.data.alignYourMindData
@@ -35,14 +36,18 @@ fun HomeScreen(
     }
 
     Scaffold(
-        modifier = Modifier.fillMaxSize().navigationBarsPadding(),
+        modifier = Modifier
+            .fillMaxSize()
+            .navigationBarsPadding(),
         bottomBar = {
             BottomAppBar(
                 backgroundColor = MaterialTheme.colors.background,
                 elevation = 8.dp,
             ) {
                 Row(
-                    modifier = Modifier.height(42.dp).fillMaxWidth(),
+                    modifier = Modifier
+                        .height(42.dp)
+                        .fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceAround
                 ) {
@@ -273,4 +278,13 @@ fun RoundedImageWithCaption(
             color = MaterialTheme.colors.onSurface
         )
     }
+}
+
+@Preview(
+    widthDp = 360,
+    heightDp = 640
+)
+@Composable
+fun PreviewHome() {
+    HomeScreen()
 }
